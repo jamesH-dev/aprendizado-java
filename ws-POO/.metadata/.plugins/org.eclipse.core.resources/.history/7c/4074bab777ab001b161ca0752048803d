@@ -1,0 +1,67 @@
+package aplication;
+
+import java.util.Scanner;
+
+import entities.Conta;
+
+public class InternetBanking {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.println("##########################################");
+		System.out.println("#         INTERNET BANKING - ITAÚ        #");
+		System.out.println("##########################################\n");
+		
+		System.out.println("Cadastro de Contas Bancárias");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		
+		System.out.print("Informe o número da Conta: ");
+		int numConta = sc.nextInt();
+		System.out.print("Informe o nome do Titular: ");
+		sc.nextLine();
+		String nomeTitular = sc.nextLine();
+		
+		Conta conta1 = new Conta(numConta, nomeTitular);
+		
+		conta1.setNumConta(numConta);
+		conta1.setNomeTitular(nomeTitular);
+		
+		System.out.print("Deseja informar depósito inicial? (s/n): ");
+		char opcao = sc.next().charAt(0);
+		if (opcao == 's' || opcao == 'S') {
+			System.out.print("Digite o valor do depósito inicial: R$ ");
+			double depInicial = sc.nextDouble();
+			conta1.setDeposito(depInicial);
+		} else {
+			conta1.setDeposito(0);
+		}
+		
+		conta1.AtualizaSaldo();
+		System.out.println(conta1.Status());
+
+		System.out.println("\n\nNovo Depósito");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.print("Informe o valor do depósito: ");
+		double valDeposito = sc.nextDouble();
+		conta1.setDeposito(valDeposito);
+		conta1.AtualizaSaldo();
+		
+		System.out.println("\n\nNovo Saque");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.print("Informe o valor do saque: ");
+		double valSaque = sc.nextDouble();
+		conta1.setSaque(valSaque);
+		conta1.AtualizaSaldo();
+		
+		
+		System.out.println("\nSITUAÇÃO DA CONTA ATUALIZADA!");
+		System.out.println(conta1.Status());
+		
+		
+		sc.close();
+
+	}
+
+}

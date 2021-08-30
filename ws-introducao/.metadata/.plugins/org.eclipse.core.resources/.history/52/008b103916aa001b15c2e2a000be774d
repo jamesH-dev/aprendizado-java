@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		double salario, calc1, calc2, calc3, total;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Qual é o valor do Salário?:");
+		salario = sc.nextDouble();
+		
+		if (salario <= 2000.00) {
+			System.out.println("Isento!");
+		}
+		else if (salario > 2000.00 && salario <= 3000.00 ) {
+			calc1 = (salario - 2000.00) * 0.08;
+			System.out.printf("R$ %.2f%n", calc1);
+		}
+		else if (salario > 3000.00 && salario <= 4500.00 ) {
+			calc1 = (salario - 2000.00) * 0.08;
+			calc2 = (calc1 - 3000.00) * 0.18;
+			total = calc1 + calc2;
+			System.out.printf("R$ %.2f%n", total);
+		}
+		else {
+			calc1 = (salario - 2000.00) * 0.08;
+			calc2 = (salario - 3000.00) * 0.18;
+			calc3 = (salario - 4500.00) * 0.28;
+			total = calc1 + calc2 + calc3;
+			System.out.printf("R$ %.2f%n", total);
+		}
+		
+		sc.close();
+
+	}
+
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		double x, y, h;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite o horário inicial do game");
+		x = sc.nextDouble();
+		System.out.println("Digite o horário final do game");
+		y = sc.nextDouble();
+		if	(((x >= 1) || (y >= 1) && (x <= 24) || (y <= 24))) {
+			x = x / 60;
+			y = y / 60;
+			h = (y - x) * 60;
+			System.out.printf("O JOGO DUROU %.0f HORAS", h);
+		}
+		else {
+			System.out.println("Hora digitada inválida");
+		}
+		
+		
+		sc.close();
+
+	}
+
+}

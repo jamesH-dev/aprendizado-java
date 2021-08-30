@@ -1,0 +1,70 @@
+package entities;
+
+public class Conta {
+	public static final int TAXA = 5;
+	private int numConta;
+	private String nomeTitular;
+	private double depositoInicial;
+	private double saldo;
+	
+	public double Saldo() {
+		return saldo + depositoInicial;
+	}
+	
+	public double Deposito(double valDeposito) {
+		return saldo + valDeposito;
+	}
+	
+	public double Saque(double valSaque) {
+		return saldo - valSaque - TAXA;
+	}
+	
+	public String Status() {
+		return  "\n\nSITUAÇÃO DA CONTA Nº " + numConta
+				+ "\nTitular: " + nomeTitular
+				+ "\nSaldo: R$"  + String.format("%.2f", Saldo());
+	}
+	
+	public Conta(int numConta, String titular) {
+		super();
+		this.numConta = numConta;
+		this.nomeTitular = titular;
+	}
+		
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public int getNumConta() {
+		return numConta;
+	}
+
+	public void setNumConta(int numConta) {
+		this.numConta = numConta;
+	}
+
+	public String getTitular() {
+		return nomeTitular;
+	}
+
+	public void setTitular(String titular) {
+		this.nomeTitular = titular;
+	}
+
+	public double getDepositoInicial() {
+		return depositoInicial;
+	}
+
+	public void setDepositoInicial(double depositoInicial) {
+		this.depositoInicial = depositoInicial;
+	}
+	
+	
+	
+	
+}

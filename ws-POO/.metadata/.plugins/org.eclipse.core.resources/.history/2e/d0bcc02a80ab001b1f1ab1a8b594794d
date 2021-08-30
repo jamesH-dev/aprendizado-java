@@ -1,0 +1,49 @@
+package entities;
+
+public class Conta {
+	private int numConta;
+	private String nomeTitular;
+	private double saldo;
+	
+	
+	public void deposito(double montante) {
+		saldo += montante;
+	}
+	
+	public void saque (double montante) {
+		saldo -= montante + 5;
+	}
+	
+	public Conta(int numConta, String nomeTitular, double saldoInicial) {
+		this.numConta = numConta;
+		this.nomeTitular = nomeTitular;
+		this.saldo = saldoInicial;
+	}
+	
+	public Conta(int numConta, String nomeTitular) {
+		this.numConta = numConta;
+		this.nomeTitular = nomeTitular;
+	}
+
+	public int getNumConta() {
+		return numConta;
+	}
+
+	public String getNomeTitular() {
+		return nomeTitular;
+	}
+
+	public void setNomeTitular(String nomeTitular) {
+		this.nomeTitular = nomeTitular;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+	
+	
+	
+	
+	
+	
+}

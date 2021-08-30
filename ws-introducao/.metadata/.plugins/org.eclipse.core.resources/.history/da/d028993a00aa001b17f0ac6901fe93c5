@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int x, y, h;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite o horário inicial do game");
+		x = sc.nextInt();
+		System.out.println("Digite o horário final do game");
+		y = sc.nextInt();
+		if	(x < y) {
+			h = y - x;
+		}
+		else {
+			x = x * 60;
+			y = y * 60;
+			h = (((24 * 60 - x) + y)/24)/60;
+		}
+		
+		System.out.printf("O JOGO DUROU %d HORAS", h);
+		
+		
+		sc.close();
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package aplication;
+
+import java.util.Scanner;
+
+import entities.Conta;
+
+public class InternetBanking {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Conta conta = new Conta();
+		
+		System.out.println("##########################################");
+		System.out.println("#         INTERNET BANKING - ITAÚ        #");
+		System.out.println("##########################################\n");
+		
+		System.out.println("Cadastro de Contas Bancárias");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		
+		System.out.print("Informe o número da Conta: ");
+		int numConta = sc.nextInt();
+		
+
+		
+		sc.close();
+
+	}
+
+}

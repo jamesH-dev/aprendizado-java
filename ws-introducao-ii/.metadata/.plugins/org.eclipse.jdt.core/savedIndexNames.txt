@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+D:\Arquivos de Usuário\James\Área de Trabalho\Dev Trainning\Java\Workspace\ws-introducao-ii\.metadata\.plugins\org.eclipse.jdt.core
+4168411044.index
+2499878056.index
